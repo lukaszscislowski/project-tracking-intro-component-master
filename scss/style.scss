@@ -1,0 +1,146 @@
+@import './variables.scss';
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+.container {
+    // position: relative;
+    // max-width: 1440px;
+    min-height: 800px;
+    margin: 0;
+    display: grid;
+    justify-items: stretch;
+    
+    background: hsl(0, 0%, 100%);
+    grid-template-columns: repeat(2, 1fr);
+
+    @include screen(small) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include screen(medium) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.container__column--left {
+   display: grid;
+    @include screen(medium) {
+        grid-row: 2/2;
+    }
+}
+
+.container__title {
+    display: grid;
+    // position: relative;
+    height:128px;
+    width: 470px;
+    
+    margin: 0 auto;
+    font-family: $font-familyII;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 3.5 * $font-size;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.container__subtitle {
+    display: grid;
+    // position: relative;
+    margin: 200px auto;
+    height: 25px;
+    width: 230px;
+    
+    font-family: $font-family;
+    
+}
+  
+.container__rectangle {
+    background: hsl(230, 29.4%, 20%);
+    font-family: $font-familyII;
+    width: 28px;
+    height: 16px;
+    margin: 3px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    border-radius: 12.5px;
+    text-transform: uppercase;
+}
+.container__subtitle--head {
+    margin: 0;
+    width: 220px;
+    height: 18px;
+    color: hsl(230, 29.4%, 20%);
+    opacity: 50%;
+    font-family: $font-familyII;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.container__subtext {
+    // position: relative;
+    width: 267px;
+    height: 52px;
+    
+    font-family: $font-family;
+    font-size: $font-size;
+    color: hsl(230, 29.4%, 20%);
+    opacity: 75%;
+}
+
+.button__primary {
+    position: relative;
+   
+    width: 184px;
+    height: 48px;
+    border-radius: 5px;
+    background: $colorRed;
+}
+
+.button__title {
+    position: absolute;
+    width: 120px;
+    height: 19px;
+    left: 30px;
+    top:12px;
+    color:#fff;
+    font-family: $font-familyII;
+    font-size: $font-size;
+
+}
+
+.button__primary::after {
+    content: 'TO SEE A PREVIEW';
+    position: relative;
+    left:190px;
+    color:hsl(230, 29.4%, 20%);
+    font-family: $font-familyII;
+    opacity: 50%;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+.container__column--right{
+   
+}
+.container__background {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 86px;
+    width: 705px;
+    height: 427px;
+    background: $lightGreyBlue;
+    border-radius: 0 0 0 60px;
+}
