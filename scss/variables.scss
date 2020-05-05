@@ -36,6 +36,15 @@ $small-media: 'screen and (min-width: #{$bp-sm})';
     
 }
 
+$large-media: 'screen and(min-width: #{$bp-mdm})';
+
+@mixin screen($size: large) {
+    @if $size == 'large' {
+        @media #{$large-media} {
+            @content;
+        }
+    }
+}
 
 $medium-media: 'screen and (max-width: #{$bp-md})';
 
